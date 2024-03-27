@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #401971;
+  height: 100vh; /* Adjust as needed */
+}
+
+.header {
+  display: flex;
+  margin-top: 30px;
+}
+
+.headerText {
+  font-size: 30px;
+  color: #FFFFFF;
+  margin-left: 50px;
+}
+
+.eventContainer {
+  display: flex;
+  margin-top: 20px;
+}
+
+.eventImage {
+  width: 150px;
+  height: 140px;
+  border-radius: 20px;
+  margin-left: 20px;
+}
+
+.eventDetails {
+  margin-top: 40px;
+}
+
+.eventName {
+  font-size: 25px;
+  color: #FFFFFF;
+}
+
+.eventDate {
+  font-size: 20px;
+  color: #C7ADCE;
+  margin-top: 10px;
+}
+
+.ticketTypetext {
+  font-size: 25px;
+  color: #FFFFFF;
+  margin-top: 20px;
+  margin-right: 200px;
+}
+
+.ticketType {
+  background-color: #C7ADCE;
+  width: 350px;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticketTypePrice {
+  font-size: 20px;
+  color: #000000;
+}
+
+.quantityContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  justify-content: flex-end;
+}
+
+.quantityButton {
+  font-size: 20px;
+  color: #000000;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.quantity {
+  font-size: 20px;
+  color: #000000;
+  padding: 0 10px;
+}
+
+.orderSummaryContainer {
+  margin-right: 50px;
+  margin-left: 30px;
+}
+
+.orderSummaryTitle {
+  font-size: 25px;
+  color: #FFFFFF;
+  margin-top: 30px;
+}
+
+.orderSummaryItem {
+  margin-top: 10px;
+}
+
+.orderSummaryText {
+  font-size: 20px;
+  color: #C7ADCE;
+  margin-bottom: 5px;
+}
+
+.checkoutButton {
+  background-color: #F6BD0F;
+  height: 40px;
+  width: 300px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border-radius: 20px;
+  margin-top: 30px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.checkoutButtonText {
+  font-size: 20px;
+  color: #000000;
+  text-align: center;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.backButton {
+  font-size: 40px;
+  color: #FFB300;
+  cursor: pointer;
 }
