@@ -2,52 +2,43 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function CheckoutButton() {
-    return (
-        <button className="checkoutButton">
-            <span className="checkoutButtonText">Checkout</span>
-        </button>
-    );
-}
-
-function BackButton({ navigation }) {
-    const gotoeventdetails = () => {
-    }
-
-    return (
-        <button onClick={gotoeventdetails}>
-            <span className="backButton">{'<'}</span>
-        </button>
-    );
+  return (
+    <button className="checkoutButton">
+      <span className="checkoutButtonText">Checkout</span>
+    </button>
+  );
 }
 
 const TicketType = ({ price, ticketPrice, updateOrderSummary }) => {
     const [quantity, setQuantity] = useState(0);
-
-    const decreaseQuantity = () => {
-        if (quantity > 0) {
-            setQuantity(prevQuantity => prevQuantity - 1);
-        }
-    };
-
+  
     const increaseQuantity = () => {
-        setQuantity(prevQuantity => prevQuantity + 1);
+      setQuantity(prevQuantity => prevQuantity + 1);
     };
-
+  
+    const decreaseQuantity = () => {
+      setQuantity(prevQuantity => prevQuantity - 1);
+    };
+  
     useEffect(() => {
-        updateOrderSummary(price, quantity);
-    }, [quantity]); // Update order summary whenever quantity changes
+      updateOrderSummary(price, quantity);
+    }, [quantity]);  // Update on any quantity change
+  
 
-    return (
-        <div className="ticketType">
-            <span className="ticketTypePrice">{price}</span>
-            <div className="quantityContainer">
-                <button onClick={decreaseQuantity}>-</button>
-                <span className="quantity">{quantity}</span>
-                <button onClick={increaseQuantity}>+</button>
-            </div>
-        </div>
-    );
-}
+  return (
+    <div className="ticketType">
+      <span className="ticketTypePrice">{price}</span>
+      <div className="quantityContainer">
+        <button onClick={decreaseQuantity}>-</button>
+        <span className="quantity">{quantity}</span>
+        <button onClick={increaseQuantity}>+</button>
+      </div>
+    </div>
+  );
+};
+
+// ... the rest of the code remains unchanged
+
 
 const Selecttickets = ({ navigation }) => {
     const [orderSummary, setOrderSummary] = useState({
@@ -67,19 +58,19 @@ const Selecttickets = ({ navigation }) => {
     return (
         <div className="container">
             <div className="header">
-                <BackButton navigation={navigation} />
-                <span className="headerText">Select Tickets</span>
+                <span className="headerText">Select Your Tickets</span>
             </div>
 
-            <div className="eventContainer">
-                {/* <img src={require('../../assets/img/festive.jpg')} className="eventImage" alt="Event" /> */}
-                <div className="eventDetails">
-                    <span className="eventName">Event Name</span>
-                    <span className="eventDate">Event Date & Time</span>
+            <div className="ticketContainer">
+                <div className="ticketDetails">
+                    <span className="typetext">Type</span>
+                    <span className="pricetext">Price</span>
+                    <span className="selectTicketstext">Select Tickets</span>
+                    <span className="amounttext">Amount</span>
                 </div>
             </div>
 
-            <span className="ticketTypetext">Ticket Type</span>
+            
 
             <div className="ticketTypeTitle">
                 {ticketTypes.map((price, index) => (

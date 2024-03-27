@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #401971;
+  background-color: #ffffff;
   height: 100vh; /* Adjust as needed */
 }
 
@@ -13,42 +13,41 @@
 
 .headerText {
   font-size: 30px;
-  color: #FFFFFF;
+  color: #000000;
   margin-left: 50px;
 }
 
-.eventContainer {
+.ticketContainer {
   display: flex;
   margin-top: 20px;
 }
 
-.eventImage {
-  width: 150px;
-  height: 140px;
-  border-radius: 20px;
-  margin-left: 20px;
-}
-
-.eventDetails {
-  margin-top: 40px;
-}
-
-.eventName {
-  font-size: 25px;
-  color: #FFFFFF;
-}
-
-.eventDate {
-  font-size: 20px;
-  color: #C7ADCE;
-  margin-top: 10px;
-}
-
-.ticketTypetext {
-  font-size: 25px;
-  color: #FFFFFF;
+.typetext {
+  font-size: 15px;
+  color: #000000;
   margin-top: 20px;
-  margin-right: 200px;
+  margin-right: 20px;
+}
+
+.pricetext {
+  font-size: 15px;
+  color: #000000;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.selectTicketstext {
+  font-size: 15px;
+  color: #000000;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.amounttext {
+  font-size: 15px;
+  color: #000000;
+  margin-top: 20px;
+  margin-right: 20px;
 }
 
 .ticketType {
@@ -94,7 +93,7 @@
 
 .orderSummaryTitle {
   font-size: 25px;
-  color: #FFFFFF;
+  color: #000000;
   margin-top: 30px;
 }
 
@@ -104,7 +103,7 @@
 
 .orderSummaryText {
   font-size: 20px;
-  color: #C7ADCE;
+  color: #000000;
   margin-bottom: 5px;
 }
 
@@ -125,10 +124,4 @@
   color: #000000;
   text-align: center;
   font-weight: bold;
-}
-
-.backButton {
-  font-size: 40px;
-  color: #FFB300;
-  cursor: pointer;
 }
