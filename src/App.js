@@ -17,7 +17,8 @@ const TicketType = ({ price, ticketPrice, updateOrderSummary }) => {
     };
   
     const decreaseQuantity = () => {
-      setQuantity(prevQuantity => prevQuantity - 1);
+      console.log('Decreasing quantity'); // Add this line for debugging
+      setQuantity(prevQuantity => Math.max(0, prevQuantity - 1));
     };
   
     useEffect(() => {
